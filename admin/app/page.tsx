@@ -1,8 +1,11 @@
+import Sidebar from '@/components/Sidebar/Sidebar';
 import React from 'react';
 
 const AdminPage = () => {
   return (
-    <div>AdminPage Vriksh Consulting</div>
+    <div className='flex'>
+      <Sidebar />
+    </div>
   )
 }
 
