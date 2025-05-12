@@ -61,12 +61,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
             <motion.div
-              className="relative h-10 w-32"
+              className="relative h-16 w-48"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <Image
-                src="/logo.png"
+                src="/Giflogo.gif"
                 alt="Vriksh Consulting Logo"
                 fill
                 className="object-contain"
