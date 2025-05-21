@@ -3,149 +3,183 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Shubhashish Bhattacharya",
-    bio: "With over 15 years of experience in business consulting, John leads our team with vision and expertise.",
-    image: "/SB.jpg",
+    name: "S.N. Jain",
+    bio: "Over 40 years of experience across industries, including leadership roles as CEO of several MNCs. He is a seasoned mentor and consultant, specializing in strategy and carbon emission footprint management.",
+    image: "/team/sp.png",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
     id: 2,
-    name: "Debashish Bhattacharya",
-    bio: "Sarah brings extensive experience in financial services and helps clients navigate complex funding challenges.",
-    image: "/DB.jpg",
+    name: "Shubhashish Bhattacharya",
+    bio: "Veteran business leader and coach with 34 years of experience, including 15 years in CEO/CXO roles and 26 years leading Vriksh Consulting. Mentor to startups and advisor to top corporates and educational institutions on leadership, strategy, and talent development.",
+    image: "/team/SB.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
     id: 3,
-    name: "Sugata Haldar",
-    bio: "Michael leads our digital transformation initiatives with innovative approaches to technology integration.",
-    image: "/SG.jpg",
+    name: "Debashish Bhattacharya",
+    bio: "Seasoned consulting leader with 30 years' experience transforming businesses through strategy, mentoring, and technology-led solutions. Expert in aligning processes with business goals and enabling global consulting talent across SAP and Siemens PLM ecosystems.",
+    image: "/team/DB.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
     id: 4,
-    name: "Kaushik Chatopadhyay",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/kc.jpg",
+    name: "Sugata Haldar",
+    bio: "Seasoned HR and business strategy consultant with 32 years of experience leading transformation across telecom, manufacturing, and consulting sectors. Currently with Vriksh Consulting, he brings deep expertise in strategic HR, marketing, and organizational development.",
+    image: "/team/SG.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
+  {
+    id: 5,
+    name: "Kaushik Chatopadhyay",
+    bio: "Chartered Accountant with over 40 years of international experience. He is a serial entrepreneur and financial strategist known for his visionary approach and business acumen.",
+    image: "/team/kc.png",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Rajendara Tondapurkar",
-    bio: "With over 15 years of experience in business consulting, John leads our team with vision and expertise.",
-    image: "/ttt.jpg",
+    bio: "Seasoned professional with expertise in developing customer bases for sheet piles, flat products, and wire rods across multiple regions. He has secured key government approvals and successfully represented the company in central and state government authorities, driving business growth and strategic partnerships.",
+    image: "/team/rt.png",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
-    id: 6,
-    name: "Suvobroto Chakraborty",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/sc.jpg",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-    },
-  }, 
-   {
     id: 7,
-    name: "V.S Tomar",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/t.jpg",
+    name: "Suvobroto Chakraborty",
+    bio: "Over 45 years of expertise in sales and marketing, with unmatched leadership qualities and project management skills. His strategic vision and management abilities have consistently driven success across various initiatives.",
+    image: "/team/sc.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
     id: 8,
-    name: "Ranjan Boral",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/rb.jpg",
+    name: "V.S Tomar",
+    bio: "Retired from Indian Telecom Services, has extensive expertise in the latest technologies and a strong industry network. He has been a key mentor in government licensing and project execution.",
+    image: "/team/vs.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
+  {
+    id: 9,
+    name: "Ranjan Boral",
+    bio: "Seasoned finance professional with in-depth expertise in GST, income tax, accounts, and corporate compliances. He is the backbone of the team, ensuring financial accuracy and regulatory adherence.",
+    image: "/team/rb.png",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
 
   {
-    id: 9,
+    id: 10,
     name: "Sushmita Dey",
-    bio: "Michael leads our digital transformation initiatives with innovative approaches to technology integration.",
-    image: "/SD.jpg",
+    bio: "Specializing in strategic sales, digital transformation, and people development solutions. Experienced in managing training programs across leadership, remote selling, and behavioural development.",
+    image: "/team/SD.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
-    id: 10,
-    name: "Anirvan Roy",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/AR.jpg",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-    },
-  },
-    {
     id: 11,
-    name: "Anshuman Gupta",
-    bio: "Sarah brings extensive experience in financial services and helps clients navigate complex funding challenges.",
-    image: "/AG.jpg",
+    name: "Anirvan Roy",
+    bio: "Dynamic business development professional with 25+ years of global experience across emerging technologies and innovative business models. Versatile team player with a proven track record in sales management across diverse industries, including eLearning, LMS, and interpretation systems.",
+    image: "/team/AR.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
-     
-  
   {
     id: 12,
-    name: "Anindita Chakraborty",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/ac.jpg",
+    name: "Anshuman Gupta",
+    bio: "Anshuman Gupta is an experienced corporate trainer and HR consultant with over 20 years in the industry. He is a Certified NLP Master Practitioner, POSH Trainer, Mercuri Certified Sales Trainer, Certified HRBP, and a Mental Health Practitioner (EFT, TFT, CBT, REBT).",
+    image: "/team/AG.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
+
+  {
+    id: 13,
+    name: "Anindita Chakraborty",
+    bio: "Anindita has 20 years of experience in construction chemical sales, with unmatched market knowledge and a strong industry network. Her go-getter approach strengthens the sales team with valuable insights and application expertise.",
+    image: "/team/ac.jpg",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
   {
-    id: 13,
+    id: 14,
     name: "Chandan Kumar",
-    bio: "Priya oversees our market research and data analytics, providing clients with actionable insights.",
-    image: "/ck.jpg",
+    bio: "Seasoned sales professional with 20 years of experience in construction chemicals, government projects, and the automobile industry. He specializes in driving business growth through strategic client engagement and end-to-end project management.",
+    image: "/team/ck.jpg",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
- 
+
+  {
+    id: 15,
+    name: "Mudit Srivastava",
+    bio: "Postgraduate from IMT Ghaziabad with over 25 years of experience in the financial services industry. Brings extensive expertise with more than 9 years in the general insurance sector and over 16 years in banking, including more than a decade in the credit department. Proven track record in both branch banking operations and credit management.",
+    image: "/team/ms.png",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
 ];
 
 const Team = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Leadership Team</h2>
@@ -167,16 +201,16 @@ const Team = () => {
                 transition: { duration: 0.3 },
               }}
             >
-              <div className="relative h-64 w-full overflow-hidden">
+              <div className="relative h-80 w-full overflow-hidden">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                 >
                   <Image
-                    src={member.image || "/placeholder.svg"}
+                    src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover transition-all duration-500"
+                    className="object-cover transition-all duration-500 "
                   />
                 </motion.div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -192,13 +226,22 @@ const Team = () => {
                       <Linkedin size={18} />
                     </motion.a>
                     <motion.a
-                      href={member.social.twitter}
+                      href={member.social.instagram}
                       className="bg-white/90 text-emerald-600 p-2 rounded-full hover:bg-emerald-600 hover:text-white transition-colors duration-200"
-                      aria-label={`${member.name}'s Twitter profile`}
+                      aria-label={`${member.name}'s Instagram profile`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <Twitter size={18} />
+                      <Instagram size={18} />
+                    </motion.a>
+                    <motion.a
+                      href={member.social.youtube}
+                      className="bg-white/90 text-emerald-600 p-2 rounded-full hover:bg-emerald-600 hover:text-white transition-colors duration-200"
+                      aria-label={`${member.name}'s Youtube profile`}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Youtube size={18} />
                     </motion.a>
                   </div>
                 </div>

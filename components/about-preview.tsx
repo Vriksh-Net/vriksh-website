@@ -1,12 +1,15 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
-import { motion } from "framer-motion"
-import AnimatedSection from "@/components/animated-section"
-import { slideInLeftVariants, slideInRightVariants } from "@/lib/animation-utils"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "@/components/animated-section";
+import {
+  slideInLeftVariants,
+  slideInRightVariants,
+} from "@/lib/animation-utils";
+import { Button } from "@/components/ui/button";
 
 const AboutPreview = () => {
   return (
@@ -19,35 +22,26 @@ const AboutPreview = () => {
               variants={slideInLeftVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ 
-                once: true, 
-                margin: "-100px" 
+              viewport={{
+                once: true,
+                margin: "-100px",
               }}
             >
               <Image
-                src="/placeholder.svg?height=800&width=600"
+                src="/images/about.gif"
                 alt="About Vriksh Consulting"
                 fill
-                className="object-cover"
+                className="object-cover transition:transform duration-500 ease-in-out hover:scale-105"
               />
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -bottom-6 -left-6 w-24 h-24 bg-emerald-200 rounded-full opacity-70"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: 0.3 
-                }}
-              />
-              <motion.div
                 className="absolute -top-6 -right-6 w-16 h-16 bg-emerald-400 rounded-full opacity-60"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: 0.5 
+                transition={{
+                  duration: 0.5,
+                  delay: 0.5,
                 }}
               />
             </motion.div>
@@ -58,21 +52,26 @@ const AboutPreview = () => {
               variants={slideInRightVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ 
-                once: true, 
-                margin: "-100px" 
+              viewport={{
+                once: true,
+                margin: "-100px",
               }}
             >
-              <h2 className="text-3xl font-semibold mb-6 text-gray-600">About Us</h2>
+              <h2 className="text-3xl font-semibold mb-6 text-gray-600">
+                About Us
+              </h2>
               <p className="text-gray-600 mb-6 text-regular">
-                At Vriksh Consulting, we are dedicated to helping businesses and startups reach their full potential.
-                With our comprehensive range of services, we provide tailored solutions that address the unique
-                challenges and opportunities of each client.
+                At Vriksh Consulting, we are dedicated to helping businesses and
+                startups reach their full potential. With our comprehensive
+                range of services, we provide tailored solutions that address
+                the unique challenges and opportunities of each client.
               </p>
               <p className="text-gray-600 mb-8 text-regular">
-                Our team of experienced professionals brings expertise across multiple domains, from financial services
-                and sales enablement to digital solutions and market research. We partner with our clients to drive
-                sustainable growth and achieve measurable results.
+                Our team of experienced professionals brings expertise across
+                multiple domains, from financial services and sales enablement
+                to digital solutions and market research. We partner with our
+                clients to drive sustainable growth and achieve measurable
+                results.
               </p>
               <Button asChild className="bg-emerald-600 hover:bg-emerald-700">
                 <Link href="/about" className="flex items-center gap-2">
@@ -80,10 +79,10 @@ const AboutPreview = () => {
                   <motion.span
                     initial={{ x: 0 }}
                     whileHover={{ x: 5 }}
-                    transition={{ 
-                      type: "spring", 
-                      stiffness: 400, 
-                      damping: 10 
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10,
                     }}
                   >
                     <ArrowRight size={16} />
@@ -95,7 +94,7 @@ const AboutPreview = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default AboutPreview;

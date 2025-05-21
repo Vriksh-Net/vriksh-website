@@ -51,13 +51,13 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 bg-gray-50">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
             <motion.div
@@ -72,8 +72,10 @@ const Navbar = () => {
                 className="object-contain"
                 priority
               />
+              
             </motion.div>
           </Link>
+            <p className="text-gray-800 text-[10px] relative top-3.5 right-42">Estd. 1997</p>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
@@ -105,10 +107,20 @@ const Navbar = () => {
             ))}
           </div>
 
+          <div className="hidden md:block absolute top-5.2 right-40">
+            <Button
+              asChild
+              className="bg-transparent hover:bg-emerald-200 border rounded-full text-gray-800 flex items-center gap-2"
+            >
+              <Link href="/gallery">
+                Gallery
+              </Link>
+            </Button>
+          </div>
           <div className="hidden md:block">
             <Button
               asChild
-              className="bg-emerald-600 hover:bg-emerald-700 flex items-center gap-2"
+              className="bg-emerald-600 hover:bg-emerald-700 flex items-center"
             >
               <Link href="/brochures">
                 <FileText size={16} className="mr-1" />
@@ -160,6 +172,21 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                className="pt-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.1 }}
+              >
+                <Button
+                  asChild
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-200/30 flex items-center justify-center gap-2"
+                >
+                  <Link href="/gallery">
+                    Gallery
+                  </Link>
+                </Button>
+              </motion.div>
               <motion.div
                 className="pt-2"
                 initial={{ opacity: 0, y: 20 }}

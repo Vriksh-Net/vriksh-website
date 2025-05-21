@@ -14,20 +14,20 @@ import Link from "next/link";
 
 const services = [
   {
-    id: "money",
-    title: "Vriksh.Money",
-    description:
-      "We provide all types of loans, including business loans and MSME funding, tailored for startups.",
-    icon: Coins,
-    href: "/services#money",
-  },
-  {
     id: "grow",
     title: "Vriksh.Grow",
     description:
       "We specialise in sales enablement and assist companies in creating effective sales plans to expand their sales.",
     icon: TrendingUp,
     href: "/services#grow",
+  },
+  {
+    id: "money",
+    title: "Vriksh.Money",
+    description:
+      "We provide all types of loans, including business loans and MSME funding, tailored for startups.",
+    icon: Coins,
+    href: "/services#money",
   },
   {
     id: "net",

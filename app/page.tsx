@@ -6,6 +6,8 @@ import Stats from '@/components/stats';
 import Articleinsights from '@/components/article-insights';
 import Partners from '@/components/partners';
 import Subscribe from '@/components/subscribe';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const page = () => {
   return (

@@ -1,4 +1,4 @@
-"use client"
+"\"use client"
 
 // Animation utility functions and constants for reuse across components
 import type { Variants } from "framer-motion"
@@ -161,6 +161,16 @@ export const slideButtonVariants: Variants = {
       type: "spring",
       stiffness: 400,
       damping: 10,
+    },
+  },
+}
+
+export const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
     },
   },
 }

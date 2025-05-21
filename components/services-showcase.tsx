@@ -15,6 +15,23 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const services = [
+    {
+    id: "grow",
+    title: "Vriksh.Grow",
+    description:
+      "We specialise in sales enablement and assist companies in creating effective sales plans to expand their sales.",
+    longDescription:
+      "Our sales enablement services help businesses optimize their sales processes, train their teams, and implement strategies that drive revenue growth. We work with companies of all sizes to develop customized sales plans that align with their business objectives and market positioning.",
+    icon: TrendingUp,
+    color: "bg-emerald-100 text-emerald-600",
+    hoverColor: "hover:bg-emerald-600 hover:text-white",
+    benefits: [
+      "Comprehensive sales strategy development",
+      "Sales team training and performance optimization",
+      "CRM implementation and process improvement",
+      "Market analysis and competitive positioning",
+    ],
+  },
   {
     id: "money",
     title: "Vriksh.Money",
@@ -30,23 +47,6 @@ const services = [
       "Competitive interest rates and flexible repayment terms.",
       "Quick approval process with minimal documentation.",
       "Expert guidance on financial planning and management.",
-    ],
-  },
-  {
-    id: "grow",
-    title: "Vriksh.Grow",
-    description:
-      "We specialise in sales enablement and assist companies in creating effective sales plans to expand their sales.",
-    longDescription:
-      "Our sales enablement services help businesses optimize their sales processes, train their teams, and implement strategies that drive revenue growth. We work with companies of all sizes to develop customized sales plans that align with their business objectives and market positioning.",
-    icon: TrendingUp,
-    color: "bg-emerald-100 text-emerald-600",
-    hoverColor: "hover:bg-emerald-600 hover:text-white",
-    benefits: [
-      "Comprehensive sales strategy development",
-      "Sales team training and performance optimization",
-      "CRM implementation and process improvement",
-      "Market analysis and competitive positioning",
     ],
   },
   {
@@ -287,7 +287,8 @@ const ServicesShowCase = () => {
                     ? "enhance digital presence and reach more customers online"
                     : activeService.id === "od"
                     ? "develop their teams and improve organizational effectiveness"
-                    : "leverage data and AI for better business decisions"}
+                    : "leverage data and AI for better business decisions"
+                  }
                 </p>
               </div>
             </motion.div>

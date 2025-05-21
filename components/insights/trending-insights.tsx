@@ -6,31 +6,20 @@ import { TrendingUp, ArrowRight, Clock } from "lucide-react";
 import AnimatedSection from "@/components/animated-section";
 import { staggerContainerVariants } from "@/lib/animation-utils";
 
-const trendingArticles = [
-  {
-    id: "ai-tech-2",
-    title: "Implementing Machine Learning in Small Businesses",
-    category: "AI & Technology",
-    readTime: "6 min read",
-    href: "/insights/ai-tech-2",
-  },
-  {
-    id: "startups-1",
-    title: "Emerging Startup Trends in 2025",
-    category: "New Startups and Ideas",
-    readTime: "5 min read",
-    href: "/insights/startups-1",
-  },
-  {
-    id: "marketing-1",
-    title: "Effective Digital Marketing Strategies",
-    category: "Business Marketing",
-    readTime: "7 min read",
-    href: "/insights/marketing-1",
-  },
-];
+interface TrendingInsightsProps {
+  articles: Array<{
+    slug: string;
+    title: string;
+    category: string;
+    read_time: string;
+  }>;
+}
 
-const TrendingInsights = () => {
+const TrendingInsights = ({ articles }: TrendingInsightsProps) => {
+  if (!articles || articles.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -50,9 +39,9 @@ const TrendingInsights = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {trendingArticles.map((article, index) => (
+          {articles.map((article, index) => (
             <motion.div
-              key={article.id}
+              key={article.slug}
               className="relative border border-gray-100 rounded-xl p-6 hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -68,11 +57,11 @@ const TrendingInsights = () => {
 
               <div className="flex items-center gap-1 text-sm text-gray-500 mb-4">
                 <Clock size={14} />
-                <span>{article.readTime}</span>
+                <span>{article.read_time}</span>
               </div>
 
               <Link
-                href={article.href}
+                href={`/insights/${article.slug}`}
                 className="text-emerald-600 hover:text-emerald-700 font-medium flex items-center gap-2 group"
               >
                 Read article

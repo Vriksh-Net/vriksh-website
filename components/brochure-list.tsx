@@ -18,87 +18,35 @@ import { staggerContainerVariants } from "@/lib/animation-utils";
 const brochures = [
   {
     id: "company-profile",
-    title: "Company Profile",
+    title: "Vriksh Company Profile",
     description:
       "Learn about our company history, mission, values, and services.",
     icon: FileText,
     category: "company",
     fileSize: "3.2 MB",
     fileType: "PDF",
-    downloadUrl: "#",
+    downloadUrl: "./brochure/profile.pdf",
   },
   {
-    id: "services-overview",
-    title: "Services Overview",
-    description: "Detailed information about all our consulting services.",
+    id: "sales-enablement",
+    title: "Vriksh Sales Enablement",
+    description: "Discover how we empower sales teams with tools and resources.",
     icon: FileBarChart,
     category: "company",
-    fileSize: "2.8 MB",
+    fileSize: "3.16 MB",
     fileType: "PDF",
-    downloadUrl: "#",
+    downloadUrl: "./brochure/Vriksh-sales-enablement.pdf",
   },
   {
-    id: "case-studies",
-    title: "Case Studies",
-    description: "Success stories and results from our client engagements.",
+    id: "vriksh-net",
+    title: "Vriksh.Net",
+    description: "Explore our innovative platform for data-driven insights.",
     icon: FileSpreadsheet,
     category: "resources",
     fileSize: "4.5 MB",
     fileType: "PDF",
     downloadUrl: "#",
-  },
-  {
-    id: "financial-services",
-    title: "Financial Services",
-    description: "Detailed brochure about our Vriksh.Money services.",
-    icon: FileText,
-    category: "services",
-    fileSize: "1.8 MB",
-    fileType: "PDF",
-    downloadUrl: "#",
-  },
-  {
-    id: "sales-enablement",
-    title: "Sales Enablement",
-    description: "Learn about our Vriksh.Grow services and methodologies.",
-    icon: FileText,
-    category: "services",
-    fileSize: "2.1 MB",
-    fileType: "PDF",
-    downloadUrl: "#",
-  },
-  {
-    id: "digital-solutions",
-    title: "Digital Solutions",
-    description: "Overview of our Vriksh.Net digital transformation services.",
-    icon: FileText,
-    category: "services",
-    fileSize: "2.4 MB",
-    fileType: "PDF",
-    downloadUrl: "#",
-  },
-  {
-    id: "annual-report",
-    title: "Annual Report 2024",
-    description:
-      "Our latest annual report with financial highlights and achievements.",
-    icon: FileBarChart,
-    category: "resources",
-    fileSize: "5.6 MB",
-    fileType: "PDF",
-    downloadUrl: "#",
-  },
-  {
-    id: "industry-insights",
-    title: "Industry Insights",
-    description:
-      "Research and analysis on current industry trends and forecasts.",
-    icon: FileSpreadsheet,
-    category: "resources",
-    fileSize: "3.7 MB",
-    fileType: "PDF",
-    downloadUrl: "#",
-  },
+  }
 ];
 
 const BrochureList = () => {
@@ -243,6 +191,7 @@ const BrochureGrid = ({ brochures }: { brochures: Brochure[] }) => {
             >
               <a
                 href={brochure.downloadUrl}
+                download
                 className="flex items-center justify-center gap-2"
               >
                 <Download size={16} />

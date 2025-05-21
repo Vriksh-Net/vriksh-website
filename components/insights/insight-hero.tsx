@@ -8,7 +8,7 @@ import { fadeInVariants } from "@/lib/animation-utils";
 
 const InsightsHero = () => {
   return (
-    <section className="relative bg-emerald-800 py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 py-24 overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

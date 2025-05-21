@@ -8,17 +8,22 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "CEO, TechStart Inc.",
-    image: "/placeholder.svg?height=100&width=100",
-    quote:
-      "Vriksh Consulting transformed our business strategy completely. Their Vriksh.Grow service helped us increase our sales by 40% in just six months. The team's expertise and dedication are unmatched.",
+    name: "Sanjay Patil",
+    position: "Nirmal Seeds",
+    image: "/testimonial/sp.png",
+    quote: `I’d like to brief my thoughts on association with Vriksh consulting 
+    It’s been since  last 15 years I know Mr. Bhattacharya ji & Vriksh Consulting 
+    In my early phase of my career undergone training what I like most is 
+    This is highly a interactive sessions making sure that each individual would participate 
+    Style of explanations and training is highly effective and easy to understand
+    This training has really added decent value to improve our skill set  
+    Recently we’ve organised training for our sales team & the feedback we got from the team is too encouraging `,
     rating: 5,
     service: "Vriksh.Grow",
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "",
     position: "Founder, InnovateLabs",
     image: "/placeholder.svg?height=100&width=100",
     quote:

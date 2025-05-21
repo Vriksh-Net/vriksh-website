@@ -7,15 +7,14 @@ import { staggerContainerVariants } from "@/lib/animation-utils"
 import { useEffect, useRef } from "react"
 
 const partners = [
-  { id: 1, name: "Partner 1", logo: "/Birla.jpg" },
-  { id: 2, name: "Partner 2", logo: "/GHCL.jpeg" },
-  { id: 3, name: "Partner 3", logo: "/BPCL.png" },
-  { id: 4, name: "Partner 4", logo: "/Walmart.png" },
-  { id: 5, name: "Partner 5", logo: "/Soprema.png" },
-  { id: 6, name: "Partner 6", logo: "/TOI.jpg" },
-  { id: 7, name: "Partner 4", logo: "/Walmart.png" },
-  { id: 8, name: "Partner 5", logo: "/Soprema.png" },
-  { id: 9, name: "Partner 6", logo: "/TOI.jpg" },
+  { id: 1, name: "Birla Corporation", logo: "/Birla.jpg" },
+  { id: 2, name: "GHCL", logo: "/GHCL.jpeg" },
+  { id: 3, name: "Bharat Patroleum", logo: "/BPCL.png" },
+  { id: 4, name: "Walmart", logo: "/Walmart.png" },
+  { id: 5, name: "Soprema", logo: "/Soprema.png" },
+  { id: 6, name: "Dixon", logo: "/Dixon.jpg" },
+  { id: 7, name: "Geoquest", logo: "/geoquest.png" },
+  { id: 8, name: "Motherson", logo: "/Motherson.jpg" },
 ];
 
 // Duplicate the partners array to create a seamless infinite scroll effect
