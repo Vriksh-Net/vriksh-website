@@ -11,11 +11,12 @@ const rubik = Rubik({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-rubik",
-})
+});
 
 export const metadata: Metadata = {
   title: "Vriksh Consulting - Helping Businesses Grow",
-  description: "Vriksh Consulting provides expert business consulting services including funding, sales enablement, digital solutions, training, and market research.",
+  description:
+    "Vriksh Consulting provides expert business consulting services including funding, sales enablement, digital solutions, training, and market research.",
 };
 
 export default function RootLayout({
@@ -25,10 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${rubik.className} font-sans`}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+      <body className={`${rubik.className} font-sans`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           <PageTransition>
             <main className="min-h-screen">{children}</main>
