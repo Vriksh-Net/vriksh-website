@@ -132,9 +132,9 @@ const Footer = () => {
           {/* Company Info */}
           <AnimatedSection animation="slide">
             <div className="mb-6">
-              <div className="relative h-10 w-32">
+              <div className="relative h-20 w-50 right-8">
                 <Image
-                  src="/placeholder.svg?height=40&width=128"
+                  src="/Giflogo.gif"
                   alt="logo"
                   fill
                   className="object-contain brightness-0 invert"
@@ -272,7 +272,7 @@ const Footer = () => {
           </AnimatedSection>
         </motion.div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+        <div className="border-t border-gray-500 mt-12 pt-8 text-center">
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

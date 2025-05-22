@@ -34,7 +34,7 @@ const articlesData: Article[] = [
   },
   {
     id: "1",
-    slug: "digital-transformation-strategies",
+    slug: "challanges-faced-by-indian-msmes",
     title: "Challanges faced by Indian MSMEs",
     content:
       "Digital transformation is revolutionizing how businesses operate...",
@@ -50,7 +50,7 @@ const articlesData: Article[] = [
   },
   {
     id: "2",
-    slug: "ai-in-business-operations",
+    slug: "post-covid-economic-recovery",
     title: "Indian economic recovery a brief study",
     content: "Artificial Intelligence is no longer just a buzzword...",
     excerpt:

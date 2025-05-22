@@ -45,7 +45,7 @@ const brochures = [
     category: "resources",
     fileSize: "4.5 MB",
     fileType: "PDF",
-    downloadUrl: "#",
+    downloadUrl: "/brochure/Vriksh.net.pdf",
   }
 ];
 

@@ -23,23 +23,21 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "",
-    position: "Founder, InnovateLabs",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Anindita Jain",
+    image: "/testimonial/women.jpg",
     quote:
-      "The funding solutions provided by Vriksh.Money were exactly what our startup needed. The team guided us through the entire process, making it seamless and stress-free. Highly recommended!",
+      "Working with Vriksh Consulting has been an incredibly rewarding experience. Their team helped us strategize our business expansion in the simplest, most actionable way. What truly stood out was their ability to break down complex challenges into clear, structured steps—making it easy for my team and I to execute effectively. Their approach was both insightful and practical, enabling us to turn strategy into measurable results. We’re grateful for their partnership and highly recommend them to any business looking to grow with clarity and confidence.",
     rating: 5,
-    service: "Vriksh.Money",
+    service: "Vriksh.Grow",
   },
   {
     id: 3,
-    name: "Priya Patel",
-    position: "Marketing Director, GlobalReach",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Gaurav Tamta",
+    image: "/testimonial/man.jpg",
     quote:
-      "Working with Vriksh.Net for our digital transformation was one of the best decisions we made. Their team delivered an exceptional website and digital marketing strategy that significantly improved our online presence.",
+      "I am extremely grateful to the team at Vriksh Consulting for their invaluable support in initiating and successfully securing equity funding for our business expansion in the North East. This funding marks a significant milestone in the growth of our essential oil and fragrance business. I would especially like to extend my heartfelt thanks to Shubhashish and Kaushik for their dedication, guidance, and seamless execution throughout the process. Their expertise and commitment truly made a difference.",
     rating: 5,
-    service: "Vriksh.Net",
+    service: "Vriksh.Money",
   },
 ];
 
