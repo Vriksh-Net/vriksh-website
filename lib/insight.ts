@@ -56,7 +56,7 @@ const articlesData: Article[] = [
     excerpt:
       "Discover how AI technologies are transforming business operations and creating new opportunities for growth and efficiency.",
     category: "AI & Technology",
-    image_url: "/placeholder.svg?height=800&width=1200",
+    image_url: "/images/insight3.gif",
     date: "2025-04-10",
     read_time: "7 min read",
     author: "Mr. Shubhashish Bhattacharya",
