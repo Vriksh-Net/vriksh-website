@@ -15,7 +15,7 @@ interface AnimatedCounterProps {
 const AnimatedCounter = ({ end, duration = 2, prefix = "", suffix = "", className = "" }: AnimatedCounterProps) => {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.3 })
+  const isInView = useInView(ref, { once: true, threshold: 0.3 } as any)
   const prefersReducedMotion = getReducedMotion()
 
   // Convert string like "10+" to number
