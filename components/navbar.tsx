@@ -75,7 +75,7 @@ const Navbar = () => {
               
             </motion.div>
           </Link>
-            <p className="text-gray-800 text-[10px] absolute left-1/2 top-11.5 -translate-x-1/3 md:static md:translate-x md:top-0 md:ml-4">Estd. 1997</p>
+            <p className="text-gray-800 text-[10px] relative top-3.5 right-42">Estd. 1997</p>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
