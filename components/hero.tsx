@@ -9,26 +9,25 @@ const Hero = () => {
   const prefersReducedMotion = getReducedMotion();
 
   return (
-    <div className="relative w-full h-[80vh] min-h-[600px] bg-gray-900 overflow-hidden">
+    <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] bg-gray-900 overflow-hidden">
       {/* Background Image with Parallax Effect */}
       <motion.div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 w-full h-full"
         style={{
-          backgroundImage: "url('/banner-second.jpg')",
+          zIndex: 0,
         }}
-        initial={{
-          scale: prefersReducedMotion ? 1 : 1.1,
-          filter: "brightness(0.4)",
-        }}
-        animate={{
-          scale: 1,
-          filter: "brightness(0.4)",
-          transition: {
-            duration: 1.5,
-            ease: "easeOut",
-          },
-        }}
-      />
+      >
+        <img
+          src="/banner-second.jpg"
+          alt="Hero background"
+          className="w-full h-full object-cover object-center"
+          style={{
+            filter: "brightness(0.4)",
+            transition: "transform 1.5s ease-out",
+            transform: prefersReducedMotion ? "scale(1)" : "scale(1.1)",
+          }}
+        />
+      </motion.div>
 
       {/* Animated Overlay Pattern */}
       {!prefersReducedMotion && (
@@ -47,7 +46,7 @@ const Hero = () => {
       )}
 
       {/* Content */}
-      <div className="relative h-full container mx-auto px-4 flex flex-col justify-center items-start mt-30">
+      <div className="relative h-full w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-start">
         <motion.div
           initial={{
             opacity: 0,
@@ -61,18 +60,18 @@ const Hero = () => {
             duration: 0.8,
             delay: 0.2,
           }}
-          className="mb-6"
+          className="mb-4 sm:mb-6"
         >
           <AnimatedText
             text="Helping businesses grow"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200 max-w-3xl text-shadow-custom"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-200 max-w-3xl text-shadow-custom"
             type="words"
             delay={0.1}
           />
         </motion.div>
 
         <motion.p
-          className="text-md md:text-lg text-gray-400 mb-8 max-w-2xl"
+          className="text-sm xs:text-base md:text-lg text-gray-400 mb-6 sm:mb-8 max-w-2xl"
           initial={{
             opacity: 0,
             y: 30,
@@ -90,11 +89,11 @@ const Hero = () => {
           optimize operations, and drive sustainable growth.
         </motion.p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
           <Button
             asChild
             size="lg"
-            className="bg-emerald-200 hover:bg-emerald-700 text-gray-500 hover:text-white"
+            className="w-full sm:w-auto bg-emerald-200 hover:bg-emerald-700 text-gray-500 hover:text-white"
           >
             <Link href="/services">Our Services</Link>
           </Button>
@@ -103,7 +102,7 @@ const Hero = () => {
             asChild
             size="lg"
             variant="outline"
-            className="bg-emerald-200 hover:bg-emerald-700 text-gray-500 hover:text-white"
+            className="w-full sm:w-auto bg-emerald-200 hover:bg-emerald-700 text-gray-500 hover:text-white"
           >
             <Link href="/contact">Contact Us</Link>
           </Button>
@@ -113,7 +112,7 @@ const Hero = () => {
       {/* Animated Bottom Wave */}
       {!prefersReducedMotion && (
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-16 md:h-18"
+          className="absolute bottom-0 left-0 right-0 h-10 xs:h-12 sm:h-16 md:h-18"
           initial={{
             opacity: 0,
             y: 50,

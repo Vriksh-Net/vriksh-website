@@ -59,7 +59,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 bg-gray-50">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex flex-col items-center">
             <motion.div
               className="relative h-16 w-48"
               whileHover={{ scale: 1.05 }}
@@ -72,10 +72,14 @@ const Navbar = () => {
                 className="object-contain"
                 priority
               />
-              
             </motion.div>
+            <span className="block md:hidden text-gray-800 text-[10px] mt-1">
+              Estd. 1997
+            </span>
           </Link>
-            <p className="text-gray-800 text-[10px] relative top-3.5 right-42">Estd. 1997</p>
+          <p className="hidden md:block text-gray-800 text-[10px] relative top-3.5 right-42">
+            Estd. 1997
+          </p>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">

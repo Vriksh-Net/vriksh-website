@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import {
-  ChevronRight,
   Calendar,
   Award,
   TrendingUp,
@@ -69,111 +68,97 @@ const CompanyJourney = () => {
 
   // Animation progress based on scroll
   const pathProgress = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+
+  // Responsive SVG dimensions
+  const svgWidth = 1000;
+  const svgHeight = 600;
+
+  // Responsive card width
+  const cardWidth = "w-[80vw] sm:w-[220px] md:w-[230px] lg:w-[250px]";
+
+  // Responsive timeline path
+  const timelinePath =
+    "M 100,300 C 200,200 300,400 450,300 C 600,200 700,400 800,300";
 
   return (
     <section
       ref={containerRef}
-      className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden relative"
+      className="py-10 md:py-24 bg-gradient-to-b from-gray-50 to-white overflow-x-auto relative"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Vriksh Timeline
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
             From our humble beginnings to becoming a leading consulting firm,
             explore the evolution of Vriksh Consulting through key milestones in
             our history.
           </p>
         </motion.div>
 
-        {/* Mobile Timeline View (visible on small screens) */}
-        <div className="md:hidden">
-          <div className="relative pl-8 border-l-2 border-emerald-200 space-y-10 py-4">
-            {milestones.map((milestone, index) => {
-              const totalItems = milestones.length;
-
-              // Calculate position for cards with more spacing
-              const leftPos = `${5 + (80 / (totalItems - 1)) * index}%`;
-
-              // Adjust topOffset to provide more spacing between cards
-              const topOffset = index % 2 === 0 ? "10%" : "65%";
-
-              return (
-                <motion.div
-                  key={milestone.year}
-                  className={`absolute pointer-events-auto ${
-                    index % 2 === 0 ? "origin-bottom" : "origin-top"
-                  } w-[260px] md:w-[280px] lg:w-[300px]`} // Increased card width
-                  style={{
-                    left: leftPos,
-                    top: topOffset,
-                    transform: "translate(-50%, -50%)",
-                  }}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.8,
-                    y: index % 2 === 0 ? -20 : 20,
-                  }}
-                  animate={
-                    isInView
-                      ? {
-                          opacity:
-                            activeIndex === index || activeIndex === null
-                              ? 1
-                              : 0.6,
-                          scale: activeIndex === index ? 1.05 : 1,
-                          y: 0,
-                        }
-                      : {}
-                  }
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onMouseLeave={() => setActiveIndex(null)}
+        {/* Vertical Timeline for Mobile */}
+        <div className="sm:hidden flex flex-col items-center gap-6">
+          {milestones.map((milestone, index) => (
+            <motion.div
+              key={milestone.year}
+              className="flex items-center w-full max-w-xs"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+            >
+              <div className="flex flex-col items-center mr-4">
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white mb-1"
+                  style={{ backgroundColor: milestone.color }}
                 >
-                  <div
-                    className={`bg-white rounded-lg p-4 shadow-lg border-l-4 transition-all duration-300 ${
-                      activeIndex === index ? "shadow-emerald-100" : ""
-                    }`}
-                    style={{ borderLeftColor: milestone.color }}
-                  >
-                    <div className="flex items-center mb-2">
-                      <div
-                        className="w-8 h-8 rounded-full flex items-center justify-center mr-2 text-white"
-                        style={{ backgroundColor: milestone.color }}
-                      >
-                        <milestone.icon size={16} />
-                      </div>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      {milestone.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                  <milestone.icon size={20} />
+                </div>
+                {index < milestones.length - 1 && (
+                  <div className="w-1 h-10 bg-gray-300" />
+                )}
+              </div>
+              <div
+                className="bg-white rounded-lg p-4 shadow border-l-4"
+                style={{ borderLeftColor: milestone.color }}
+              >
+                <div className="font-bold text-emerald-700 mb-1">
+                  {milestone.year}
+                </div>
+                <div className="text-xs text-gray-600">
+                  {milestone.description}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Desktop Timeline View (hidden on small screens) */}
-        <div className="hidden md:block relative">
-          {/* Timeline container with max-width to ensure content stays within viewport */}
-          <div className="max-w-[1000px] mx-auto h-[600px] mb-12 relative">
+        {/* SVG Timeline for larger screens */}
+        <div className="hidden sm:block relative w-full overflow-x-auto">
+          <div
+            className="relative mx-auto"
+            style={{
+              minWidth: "600px",
+              maxWidth: "1000px",
+              height: "60vw",
+              maxHeight: "600px",
+              minHeight: "350px",
+            }}
+          >
             {/* SVG Timeline */}
             <svg
-              viewBox="0 0 1000 600"
+              viewBox={`0 0 ${svgWidth} ${svgHeight}`}
               className="w-full h-full absolute top-0 left-0"
               style={{ overflow: "visible" }}
               aria-hidden="true"
               preserveAspectRatio="xMidYMid meet"
             >
-              {/* Background decorative elements */}
+              {/* Decorative circles */}
               <motion.circle
                 cx="100"
                 cy="100"
@@ -202,9 +187,9 @@ const CompanyJourney = () => {
                 transition={{ duration: 1, delay: 0.6 }}
               />
 
-              {/* Main timeline path - shifted more to the left */}
+              {/* Main timeline path */}
               <motion.path
-                d="M 100,300 C 200,200 300,400 450,300 C 600,200 700,400 800,300"
+                d={timelinePath}
                 fill="transparent"
                 stroke="#e5e7eb"
                 strokeWidth="4"
@@ -216,7 +201,7 @@ const CompanyJourney = () => {
 
               {/* Animated path overlay */}
               <motion.path
-                d="M 100,300 C 200,200 300,400 450,300 C 600,200 700,400 800,300"
+                d={timelinePath}
                 fill="transparent"
                 stroke="url(#gradientLine)"
                 strokeWidth="4"
@@ -241,13 +226,10 @@ const CompanyJourney = () => {
                 </linearGradient>
               </defs>
 
-              {/* Milestone nodes - positioned more to the left */}
+              {/* Milestone nodes */}
               {milestones.map((milestone, index) => {
-                // Calculate position along the path with more leftward positioning
                 const totalItems = milestones.length;
-
-                // Distribute nodes more evenly with a leftward shift
-                // First node at x=100, last node at x=800 (well within container)
+                // Distribute nodes evenly
                 const xPos = 100 + (700 / (totalItems - 1)) * index;
                 const yPos = 300 + (index % 2 === 0 ? -20 : 20);
 
@@ -312,23 +294,19 @@ const CompanyJourney = () => {
               ))}
             </svg>
 
-            {/* Milestone cards - Desktop layout with improved positioning */}
+            {/* Milestone cards - Responsive positioning */}
             <div className="absolute inset-0 pointer-events-none">
               {milestones.map((milestone, index) => {
                 const totalItems = milestones.length;
-
-                // Calculate position for cards with more spacing
+                // Responsive left position
                 const leftPos = `${5 + (80 / (totalItems - 1)) * index}%`;
-
-                // Adjust topOffset to provide more spacing between cards
+                // Responsive top offset
                 const topOffset = index % 2 === 0 ? "10%" : "65%";
 
                 return (
                   <motion.div
                     key={milestone.year}
-                    className={`absolute pointer-events-auto ${
-                      index % 2 === 0 ? "origin-bottom" : "origin-top"
-                    } w-[220px] md:w-[230px] lg:w-[250px]`}
+                    className={`absolute pointer-events-auto ${index % 2 === 0 ? "origin-bottom" : "origin-top"} ${cardWidth} max-w-[90vw]`}
                     style={{
                       left: leftPos,
                       top: topOffset,
@@ -369,7 +347,7 @@ const CompanyJourney = () => {
                           <milestone.icon size={16} />
                         </div>
                       </div>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs sm:text-sm text-gray-600">
                         {milestone.description}
                       </p>
                     </div>

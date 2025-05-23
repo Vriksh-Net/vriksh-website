@@ -23,7 +23,7 @@ const services = [
     longDescription:
       "Our sales enablement services help businesses optimize their sales processes, train their teams, and implement strategies that drive revenue growth. We work with companies of all sizes to develop customized sales plans that align with their business objectives and market positioning.",
     icon: TrendingUp,
-    color: "bg-emerald-100 text-emerald-600",
+    color: "bg-emerald-400 text-emerald-600",
     hoverColor: "hover:bg-emerald-600 hover:text-white",
     benefits: [
       "Comprehensive sales strategy development",
@@ -40,7 +40,7 @@ const services = [
     longDescription:
       "Our financial services are designed to help businesses access the capital they need to grow and thrive. We understand the unique challenges that startups and small businesses face when seeking funding, and we work closely with our clients to identify the most suitable financing options.",
     icon: Coins,
-    color: "bg-amber-100 text-amber-600",
+    color: "bg-amber-400 text-amber-600",
     hoverColor: "hover:bg-amber-600 hover:text-white",
     benefits: [
       "Customized funding solutions for startups and SMEs.",
@@ -57,7 +57,7 @@ const services = [
     longDescription:
       "Our digital solutions encompass everything from website and app development to comprehensive digital marketing strategies and user experience design. We help businesses establish a strong online presence, engage with their target audience, and leverage digital channels to drive growth.",
     icon: Globe,
-    color: "bg-blue-100 text-blue-600",
+    color: "bg-blue-400 text-blue-600",
     hoverColor: "hover:bg-blue-600 hover:text-white",
     benefits: [
       "Custom website and mobile app development",
@@ -74,7 +74,7 @@ const services = [
     longDescription:
       "Our organizational development services focus on enhancing the effectiveness of your workforce through targeted training programs and strategic HR initiatives. We help businesses build strong teams, develop leadership capabilities, and create a positive workplace culture.",
     icon: Users,
-    color: "bg-purple-100 text-purple-600",
+    color: "bg-purple-400 text-purple-600",
     hoverColor: "hover:bg-purple-600 hover:text-white",
     benefits: [
       "Leadership development and executive coaching",
@@ -91,7 +91,7 @@ const services = [
     longDescription:
       "Our AI and data services leverage advanced analytics and market research to provide businesses with actionable insights. We help companies identify opportunities, understand market trends, and make data-driven decisions that drive business growth and competitive advantage.",
     icon: Database,
-    color: "bg-orange-100 text-orange-600",
+    color: "bg-orange-400 text-orange-600",
     hoverColor: "hover:bg-orange-600 hover:text-white",
     benefits: [
       "Advanced data analytics and business intelligence",

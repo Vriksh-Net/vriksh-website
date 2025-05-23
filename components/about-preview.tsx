@@ -15,10 +15,10 @@ const AboutPreview = () => {
   return (
     <section className="py-20 overflow-hidden bg-gradient-to-b from-green-100 to-gray-300">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <AnimatedSection animation="slide" className="relative">
             <motion.div
-              className="relative h-[400px] rounded-lg overflow-hidden"
+              className="relative h-64 xs:h-80 sm:h-96 md:h-[400px] w-full rounded-lg overflow-hidden"
               variants={slideInLeftVariants}
               initial="hidden"
               whileInView="visible"
@@ -31,7 +31,9 @@ const AboutPreview = () => {
                 src="/images/about.gif"
                 alt="About Vriksh Consulting"
                 fill
-                className="object-cover transition:transform duration-500 ease-in-out hover:scale-105"
+                className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
 
               {/* Decorative elements */}

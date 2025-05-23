@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FileText,
@@ -11,7 +10,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedSection from "@/components/animated-section";
 import { staggerContainerVariants } from "@/lib/animation-utils";
 
@@ -50,13 +48,6 @@ const brochures = [
 ];
 
 const BrochureList = () => {
-  const [activeTab, setActiveTab] = useState("all");
-
-  const filteredBrochures =
-    activeTab === "all"
-      ? brochures
-      : brochures.filter((brochure) => brochure.category === activeTab);
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -71,53 +62,7 @@ const BrochureList = () => {
         </AnimatedSection>
 
         <div className="mb-12">
-          <Tabs
-            defaultValue="all"
-            className="w-full"
-            onValueChange={setActiveTab}
-          >
-            <div className="flex justify-center">
-              <TabsList className="bg-white border border-gray-200">
-                <TabsTrigger
-                  value="all"
-                  className="data-[state=active]:bg-emerald-50 data-[state=active]:text-emerald-600"
-                >
-                  All Brochures
-                </TabsTrigger>
-                <TabsTrigger
-                  value="company"
-                  className="data-[state=active]:bg-emerald-50 data-[state=active]:text-emerald-600"
-                >
-                  Company
-                </TabsTrigger>
-                <TabsTrigger
-                  value="services"
-                  className="data-[state=active]:bg-emerald-50 data-[state=active]:text-emerald-600"
-                >
-                  Services
-                </TabsTrigger>
-                <TabsTrigger
-                  value="resources"
-                  className="data-[state=active]:bg-emerald-50 data-[state=active]:text-emerald-600"
-                >
-                  Resources
-                </TabsTrigger>
-              </TabsList>
-            </div>
-
-            <TabsContent value="all" className="mt-8">
-              <BrochureGrid brochures={filteredBrochures} />
-            </TabsContent>
-            <TabsContent value="company" className="mt-8">
-              <BrochureGrid brochures={filteredBrochures} />
-            </TabsContent>
-            <TabsContent value="services" className="mt-8">
-              <BrochureGrid brochures={filteredBrochures} />
-            </TabsContent>
-            <TabsContent value="resources" className="mt-8">
-              <BrochureGrid brochures={filteredBrochures} />
-            </TabsContent>
-          </Tabs>
+          <BrochureGrid brochures={brochures} />
         </div>
 
         <div className="text-center mt-16 bg-white p-8 rounded-lg shadow-sm border border-gray-100">
