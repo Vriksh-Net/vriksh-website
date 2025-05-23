@@ -113,7 +113,7 @@ const ServicesShowCase = () => {
             Comprehensive Business Soltuions
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-md">
-            Explore our range of specializedd services designed to help your
+            Explore our range of specialised services designed to help your
             business thrive in today's competitive landscape.
           </p>
         </div>
