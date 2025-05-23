@@ -39,6 +39,7 @@ const AboutContent = () => {
               alt="About Vriksh Consulting"
               fill
               className="object-cover"
+              unoptimized
             />
           </AnimatedSection>
         </div>

@@ -34,6 +34,7 @@ const AboutPreview = () => {
                 className="object-contain transition-transform duration-500 ease-in-out hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
+                unoptimized
               />
 
               {/* Decorative elements */}

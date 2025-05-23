@@ -71,6 +71,7 @@ const Navbar = () => {
                 fill
                 className="object-contain"
                 priority
+                unoptimized
               />
             </motion.div>
             <span className="block md:hidden text-gray-800 text-[10px] mt-1">

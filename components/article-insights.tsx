@@ -93,6 +93,7 @@ export default function ArticleInsights() {
                   alt={article.title}
                   fill
                   className="object-cover"
+                  unoptimized
                 />
               </div>
 
