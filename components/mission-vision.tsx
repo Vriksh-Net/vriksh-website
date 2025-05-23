@@ -45,7 +45,7 @@ const MissionVision = () => {
 
       <div className="container relative mx-auto px-4 z-10">
         <AnimatedSection animation="fade" className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
             <AnimatedTextReveal
               text="Our Mission & Vision"
               tag="span"
@@ -53,8 +53,8 @@ const MissionVision = () => {
               staggerChildren={0.02}
             />
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-emerald-500 to-purple-500 mx-auto mb-6"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
             <AnimatedTextReveal
               text="Guided by our core principles, we're committed to delivering exceptional value and driving meaningful change for our clients."
               tag="span"

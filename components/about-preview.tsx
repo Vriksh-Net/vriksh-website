@@ -31,7 +31,7 @@ const AboutPreview = () => {
                 src="/images/about.gif"
                 alt="About Vriksh Consulting"
                 fill
-                className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                className="object-contain transition-transform duration-500 ease-in-out hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
