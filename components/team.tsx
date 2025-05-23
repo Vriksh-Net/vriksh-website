@@ -8,17 +8,6 @@ import { Instagram, Linkedin, Youtube } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "S.N. Jain",
-    bio: "Over 40 years of experience across industries, including leadership roles as CEO of several MNCs. He is a seasoned mentor and consultant, specializing in strategy and carbon emission footprint management.",
-    image: "/team/sp.png",
-    social: {
-      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
-      instagram: "https://www.instagram.com/vriksh.net1/",
-      youtube: "https://www.youtube.com/@vriksh.consulting",
-    },
-  },
-  {
-    id: 2,
     name: "Shubhashish Bhattacharya",
     bio: "Veteran business leader and coach with 34 years of experience, including 15 years in CEO/CXO roles and 26 years leading Vriksh Consulting. Mentor to startups and advisor to top corporates and educational institutions on leadership, strategy, and talent development.",
     image: "/team/SB.jpg",
@@ -29,10 +18,21 @@ const teamMembers = [
     },
   },
   {
-    id: 3,
+    id: 2,
     name: "Debashish Bhattacharya",
     bio: "Seasoned consulting leader with 30 years' experience transforming businesses through strategy, mentoring, and technology-led solutions. Expert in aligning processes with business goals and enabling global consulting talent across SAP and Siemens PLM ecosystems.",
     image: "/team/DB.jpg",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
+  {
+    id: 3,
+    name: "Kaushik Chatopadhyay",
+    bio: "Chartered Accountant with over 40 years of international experience. He is a serial entrepreneur and financial strategist known for his visionary approach and business acumen.",
+    image: "/team/kc.png",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
@@ -52,21 +52,20 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Kaushik Chatopadhyay",
-    bio: "Chartered Accountant with over 40 years of international experience. He is a serial entrepreneur and financial strategist known for his visionary approach and business acumen.",
-    image: "/team/kc.png",
+    name: "Suvobroto Chakraborty",
+    bio: "Over 45 years of expertise in sales and marketing, with unmatched leadership qualities and project management skills. His strategic vision and management abilities have consistently driven success across various initiatives.",
+    image: "/team/sc.jpg",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
       youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
-
   {
     id: 6,
-    name: "Rajendara Tondapurkar",
-    bio: "Seasoned professional with expertise in developing customer bases for sheet piles, flat products, and wire rods across multiple regions. He has secured key government approvals and successfully represented the company in central and state government authorities, driving business growth and strategic partnerships.",
-    image: "/team/rt.png",
+    name: "S.N. Jain",
+    bio: "Over 40 years of experience across industries, including leadership roles as CEO of several MNCs. He is a seasoned mentor and consultant, specializing in strategy and carbon emission footprint management.",
+    image: "/team/sp.png",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
@@ -75,9 +74,9 @@ const teamMembers = [
   },
   {
     id: 7,
-    name: "Suvobroto Chakraborty",
-    bio: "Over 45 years of expertise in sales and marketing, with unmatched leadership qualities and project management skills. His strategic vision and management abilities have consistently driven success across various initiatives.",
-    image: "/team/sc.jpg",
+    name: "Shubhendu Mukherjee",
+    bio: "Specializing in strategic sales, digital transformation, and people development solutions. Experienced in managing training programs across leadership, remote selling, and behavioural development.",
+    image: "/team/sm.png",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
@@ -97,29 +96,17 @@ const teamMembers = [
   },
   {
     id: 9,
-    name: "Ranjan Boral",
-    bio: "Seasoned finance professional with in-depth expertise in GST, income tax, accounts, and corporate compliances. He is the backbone of the team, ensuring financial accuracy and regulatory adherence.",
-    image: "/team/rb.png",
+    name: "Rajendara Tondapurkar",
+    bio: "Seasoned professional with expertise in developing customer bases for sheet piles, flat products, and wire rods across multiple regions. He has secured key government approvals and successfully represented the company in central and state government authorities, driving business growth and strategic partnerships.",
+    image: "/team/rt.png",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
       youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
-
   {
     id: 10,
-    name: "Sushmita Dey",
-    bio: "Specializing in strategic sales, digital transformation, and people development solutions. Experienced in managing training programs across leadership, remote selling, and behavioural development.",
-    image: "/team/SD.jpg",
-    social: {
-      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
-      instagram: "https://www.instagram.com/vriksh.net1/",
-      youtube: "https://www.youtube.com/@vriksh.consulting",
-    },
-  },
-  {
-    id: 11,
     name: "Anirvan Roy",
     bio: "Dynamic business development professional with 25+ years of global experience across emerging technologies and innovative business models. Versatile team player with a proven track record in sales management across diverse industries, including eLearning, LMS, and interpretation systems.",
     image: "/team/AR.jpg",
@@ -130,7 +117,7 @@ const teamMembers = [
     },
   },
   {
-    id: 12,
+    id: 11,
     name: "Anshuman Gupta",
     bio: "Anshuman Gupta is an experienced corporate trainer and HR consultant with over 20 years in the industry. He is a Certified NLP Master Practitioner, POSH Trainer, Mercuri Certified Sales Trainer, Certified HRBP, and a Mental Health Practitioner (EFT, TFT, CBT, REBT).",
     image: "/team/AG.jpg",
@@ -142,10 +129,21 @@ const teamMembers = [
   },
 
   {
+    id: 12,
+    name: "Ranjan Boral",
+    bio: "Seasoned finance professional with in-depth expertise in GST, income tax, accounts, and corporate compliances. He is the backbone of the team, ensuring financial accuracy and regulatory adherence.",
+    image: "/team/rb.png",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
+  {
     id: 13,
-    name: "Anindita Chakraborty",
-    bio: "Anindita has 20 years of experience in construction chemical sales, with unmatched market knowledge and a strong industry network. Her go-getter approach strengthens the sales team with valuable insights and application expertise.",
-    image: "/team/ac.jpg",
+    name: "Mudit Srivastava",
+    bio: "Postgraduate from IMT Ghaziabad with over 25 years of experience in the financial services industry. Brings extensive expertise with more than 9 years in the general insurance sector and over 16 years in banking, including more than a decade in the credit department. Proven track record in both branch banking operations and credit management.",
+    image: "/team/ms.png",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
@@ -163,12 +161,23 @@ const teamMembers = [
       youtube: "https://www.youtube.com/@vriksh.consulting",
     },
   },
-
   {
     id: 15,
-    name: "Mudit Srivastava",
-    bio: "Postgraduate from IMT Ghaziabad with over 25 years of experience in the financial services industry. Brings extensive expertise with more than 9 years in the general insurance sector and over 16 years in banking, including more than a decade in the credit department. Proven track record in both branch banking operations and credit management.",
-    image: "/team/ms.png",
+    name: "Anindita Chakraborty",
+    bio: "Anindita has 20 years of experience in construction chemical sales, with unmatched market knowledge and a strong industry network. Her go-getter approach strengthens the sales team with valuable insights and application expertise.",
+    image: "/team/ac.jpg",
+    social: {
+      linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
+      instagram: "https://www.instagram.com/vriksh.net1/",
+      youtube: "https://www.youtube.com/@vriksh.consulting",
+    },
+  },
+
+  {
+    id: 16,
+    name: "Sushmita Dey",
+    bio: "Specializing in strategic sales, digital transformation, and people development solutions. Experienced in managing training programs across leadership, remote selling, and behavioural development.",
+    image: "/team/SD.jpg",
     social: {
       linkedin: "https://www.linkedin.com/company/vriksh-consulting/",
       instagram: "https://www.instagram.com/vriksh.net1/",
