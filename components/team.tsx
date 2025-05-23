@@ -41,7 +41,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Sugata Haldar",
+    name: "Sugata Halder",
     bio: "Seasoned HR and business strategy consultant with 32 years of experience leading transformation across telecom, manufacturing, and consulting sectors. Currently with Vriksh Consulting, he brings deep expertise in strategic HR, marketing, and organizational development.",
     image: "/team/SG.jpg",
     social: {
