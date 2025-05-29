@@ -210,7 +210,7 @@ const Team = () => {
                 transition: { duration: 0.3 },
               }}
             >
-              <div className="relative h-80 w-full overflow-hidden">
+              <div className="relative h-90 w-full overflow-hidden">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
