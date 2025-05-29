@@ -15,21 +15,21 @@ import {
 const milestones = [
   {
     year: 1997,
-    description: "Vriksh Consulting wPvt. Ltd. Incorporation.",
+    description: "Vriksh Consulting Pvt. Ltd. Incorporation.",
     icon: Calendar,
     color: "#10b981",
   },
   {
     year: 1998,
     description:
-      "Started Sales & Marketing Projects and Business Funding CICO, LG, Hero Honda, Motherson SUMI, Moserbear etc.",
+      "Started Sales & Marketing Projects and Business Funding for CICO, LG, Hero Honda, Motherson SUMI, Moserbear etc.",
     icon: Award,
     color: "#059669",
   },
   {
     year: 2005,
     description:
-      "Started Corporate Training and HR Consulting for organisationslike Airtel, Mother diary, JBM,Lanco, Asian Paint, etc.",
+      "Started Corporate Training and HR Consulting for organisations like Airtel, Mother diary, JBM,Lanco, Asian Paint, etc.",
     icon: TrendingUp,
     color: "#047857",
   },
